@@ -164,8 +164,7 @@ class ReposViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.deselectRow(at: indexPath, animated: true)
         
         let selectedRepo = repos[indexPath.row]
-        let cardVC = CardViewController()
-        cardVC.item = selectedRepo
+        let cardVC = CardViewController(item: selectedRepo)
         
         navigationController?.pushViewController(cardVC, animated: true)
     }
